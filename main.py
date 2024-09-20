@@ -3,7 +3,7 @@ score = 0
 trivia = [
     # Q1
       { 
-       'question': "What is Bowie's Favorite food? ",
+       'question': "What is Bowie's Favorite food?",
        'answer': 'pizza crust',
        'options': ['chicken', 'kible', 'rabbit']
       },
@@ -21,7 +21,7 @@ trivia = [
       },
      # Q4
       { 
-       'question': 'How old is Bowie',
+       'question': '👶How old is Bowie👴',
        'answer': '3 years old',
        'options': ['2 months old', '4 years old', '5 years old']
       },
@@ -33,7 +33,7 @@ trivia = [
       },
     # Q6
       { 
-       'question': 'Where does Bowie like to be pet?',
+       'question': '👨‍🍼💆‍♂️Where does Bowie like to be pet?💆‍♂️👨‍🍼',
        'answer': 'the side of his face',
        'options': ['his tummy', 'his legs', 'his back']
       },
@@ -45,7 +45,7 @@ trivia = [
       },
     # Q8
       { 
-       'question': 'How does Bowie feel about swimming?',
+       'question': '🏊🏼‍♂️How does Bowie feel about swimming?🏊🏼‍♂️',
        'answer': 'It is the scariest thing in the world and any body of water is the gates of hell',
        'options': ['Its his favorite thing in the world', 'He tolerates it, but needs to be given spa treatment after', 'He rather not swim']
       },
