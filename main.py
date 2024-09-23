@@ -1,5 +1,6 @@
-# You can initialize important data at the tope of the
-score = 0
+# You can initialize important data at the top of the program
+
+# Initalize a list called Trivia
 trivia = [
     # Q1
       { 
@@ -54,18 +55,51 @@ trivia = [
        'question': "🥰Who is Bowie's favorite🥰",
        'answer': "probably Lucian's dad",
        'options': ["probably Lucian's sister","probably Lucian's mom", "probably lucian"]
-      }  
+      },
     # Q10
       { 
-       'question': "What is Bowie's Flaw?",
+       'question': "What is Bowie's flaw?",
        'answer': "He thinks he is alpha",
-       'options': ["he farts a lot","he's stubborn", "he insits on peeing in the home"]
+       'options': ["he farts a lot", "he's stubborn", "he insits on peeing in the home"]
       }  
 ]
 
+# Dispaly the question and possible options
+# Function takes question (String), answer (String), options (list)
+# function returns a boolean
+def ask_question(question, answer, options):
+  # 1. Print out a question from the Trivia list
+  for current in trivia:
+  
+  # 2. Print out the options (list)
+  
+  # 3. get user input
+  # choice = input("Your answer:")
+  # print(choice)
+  
+  # 4. Check if choice matches correct answer
+  
+  return False
+  
+  
 # Main Method for the game loop
 def main():
     print("Let's Play 🐩🐶 Bowie 🐶🐩 Trivia!")
+    # Initialize the score
+    score = 0
+    
+    # Starting with just ONE trivia item, loop laster
+    # Call ask_question funciton on each item in trivia list
+    current = (trivia[0]) # prints the first dictionary
+    # Get data from that item
+    q = current['question'] # Prints the question (value of the first key)
+    a = current['answer'] 
+    opts = current['options']
+    # Pass in q, a, and options into ask_question
+    is_correct = ask_question(q, a, opts)
+    
+    
+    # Update score accordingly 
 
 
 if __name__ == "__main__":
