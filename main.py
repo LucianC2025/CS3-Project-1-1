@@ -6,7 +6,7 @@ trivia = [
       { 
        'question': "What is Bowie's Favorite food?",
        'answer': 'pizza crust',
-       'options': ['chicken', 'kible', 'pizza crust','rabbit']
+       'options': ['chicken', 'kibble', 'pizza crust','rabbit']
       },
     # Q2
       { 
@@ -74,18 +74,23 @@ def ask_question(question, answer, options):
   
   # 2. Print out the options (list)
   for option in options:
-    print(f"🐶{option}")
+    print(f"🤔 {option}")
   
   # 3. get user input
   choice = input("Enter answer: ")
   
   # 4. Check if choice matches correct answer
+  if choice.lower() == answer.lower(): # .lower() turns all characters lowercase 
+    return True
+  return False # if it passes the if check then it will ignore the return false line
 
-  
-  
-# Main Method for the game loop
+  # 5. Print a "That wasn't an option" if choice does not == one of the choices
+   
+# MAIN METHOD for the Game Loop
 def main():
     print("Let's Play 🐩🐶 Bowie 🐶🐩 Trivia!")
+    print("🐶🤨🐶🤔🐶🥺🐶🤨🐶🤔🐶🥺🐶🤨🐶🤔🐶🥺🐶🤨🐶🤔🐶🥺🐶")
+
     # Initialize the score
     score = 0
     
@@ -98,9 +103,16 @@ def main():
     # Pass in q, a, and options into ask_question
     is_correct = ask_question(q, a, opts)
     
+    print(".......")
+    if is_correct: 
+      print("🤩🥰😁😆😃🤗  You are CORRECT! 🤩🥰😁😆😃🤗")
+    else: 
+      print("😖😢😠🥹  You are WRONG 😖😢😠🥹")
     
     # Update score accordingly 
-
+    if is_correct == True:
+      score+=1
+    print(f"Current Score: {score}")
 
 if __name__ == "__main__":
     main()
