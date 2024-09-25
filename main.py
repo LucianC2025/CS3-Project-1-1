@@ -1,3 +1,5 @@
+import random 
+
 # You can initialize important data at the top of the program
 
 # Initalize a list called Trivia
@@ -42,7 +44,7 @@ trivia = [
       { 
        'question': "🤬Who is Bowie's opp?🤬",
        'answer': 'bear🐕',
-       'options': ['bear🐕', 'the door man🧍‍♂️', 'lordy🐕', 'yellow dog🐕']
+       'options': ['bear', 'the door man', 'lordy', 'yellow dog']
       },
     # Q8
       { 
@@ -67,12 +69,12 @@ trivia = [
 # Dispaly the question and possible options
 # Function takes question (String), answer (String), options (list)
 # function returns a boolean
-
 def ask_question(question, answer, options):
   # 1. Print out a question from the Trivia list
   print(question)
   
   # 2. Print out the options (list)
+  random.shuffle(options)
   for option in options:
     print(f"🤔 {option}")
   
@@ -94,24 +96,25 @@ def main():
     # Initialize the score
     score = 0
     
-    # Starting with just ONE trivia item, loop laster
-    current = (trivia[0]) # prints the first dictionary
-    # Get data from that item
-    q = current['question'] # Prints the question (value of the first key)
-    a = current['answer'] 
-    opts = current['options']
-    # Pass in q, a, and options into ask_question
-    is_correct = ask_question(q, a, opts)
-    
-    print(".......")
-    if is_correct: 
-      print("🤩🥰😁😆😃🤗  You are CORRECT! 🤩🥰😁😆😃🤗")
-    else: 
-      print("😖😢😠🥹  You are WRONG 😖😢😠🥹")
-    
-    # Update score accordingly 
-    if is_correct == True:
-      score+=1
+    # Trivia is a list 
+    for num in range(len(trivia)):
+      current = (trivia[num]) # dictionary
+      # Get data from that item
+      q = current['question']
+      a = current['answer'] 
+      opts = current['options']
+      # Pass in q, a, and options into ask_question
+      is_correct = ask_question(q, a, opts)
+      print(".......")
+      if is_correct: 
+        print("🤩🥰😁😆😃🤗  You are CORRECT! 🤩🥰😁😆😃🤗")
+      else: 
+        print("😖😢😠🥹  You are WRONG 😖😢😠🥹")
+      # Update score accordingly 
+      if is_correct == True:
+        score+=1
+        
+    # Display Final Score
     print(f"Current Score: {score}")
 
 if __name__ == "__main__":
