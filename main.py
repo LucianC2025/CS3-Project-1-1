@@ -37,8 +37,8 @@ trivia = [
     # Q6
       { 
        'question': '👨‍🍼💆‍♂️Where does Bowie like to be pet?💆‍♂️👨‍🍼',
-       'answer': 'the side of his face',
-       'options': ['his tummy',' the side of his face', 'his legs', 'his back']
+       'answer': 'side of face',
+       'options': ['his tummy','side of face', 'his legs', 'his back']
       },
     # Q7
       { 
@@ -49,20 +49,20 @@ trivia = [
     # Q8
       { 
        'question': '🏊🏼‍♂️How does Bowie feel about swimming?🏊🏼‍♂️',
-       'answer': 'It is the scariest thing in the world and any body of water is the gates of hell',
-       'options': ['Its his favorite thing in the world', 'He tolerates it, but needs to be given spa treatment after', 'He rather not swim', 'It is the scariest thing in the world and any body of water is the gates of hell']
+       'answer': 'water is hell',
+       'options': ['Its his fav', 'He tolerates it', 'He rather not', 'water is hell']
       },
     # Q9
       { 
        'question': "🥰Who is Bowie's favorite🥰",
-       'answer': "probably Lucian's dad",
-       'options': ["probably Lucian's sister","probably Lucian's mom", "probably lucian", "probably Lucian's dad"]
+       'answer': "Lucian's dad",
+       'options': ["Lucian's sister","Lucian's mom", "Lucian", "Lucian's dad"]
       },
     # Q10
       { 
        'question': "What is Bowie's flaw?",
        'answer': "He thinks he is alpha",
-       'options': ["he farts a lot", "he's stubborn", "He thinks he is alpha", "he insits on peeing in the home"]
+       'options': ["he farts a lot", "he's stubborn", "he thinks he is alpha", "he stinks"]
       }  
 ]
 
@@ -113,9 +113,9 @@ def main():
       # Update score accordingly 
       if is_correct == True:
         score+=1
-        
-    # Display Final Score
-    print(f"Current Score: {score}")
+      # DisplayScpixore
+      print(f"Current Score: {score}")
+      print()
 
 if __name__ == "__main__":
     main()
